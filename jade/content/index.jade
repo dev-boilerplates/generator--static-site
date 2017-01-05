@@ -1,0 +1,20 @@
+include ../partials/mixins
+
+.w-container
+  .Main
+    #video-gallery(class="royalSlider videoGallery rsDefault")
+      +sliderContent("images/000_general/showreel.jpg", "https://vimeo.com/88178382")
+      +sliderContent("images/003_carousel/v2/UTS.jpg")
+      +sliderContent("images/003_carousel/v2/FA_GPR.jpg")
+      +sliderContent("images/003_carousel/v2/NMM_NJ.jpg")
+      +sliderContent("images/003_carousel/v2/NM_LM.jpg")
+      +sliderContent("images/003_carousel/v2/AS_GP.jpg")
+      +sliderContent("images/003_carousel/v2/SS_22.jpg")
+      +sliderContent("images/003_carousel/v2/GP_01.jpg")
+.w-container
+  .section
+    +service("3D <br>Scanning", "3dscanning", "images/000_general/photoicon.png", "We provide 3D scanning for visualisation, fabrication and animation. We cover all scales, from minute objects to vast landscapes.")
+    +service("3d <br>Publishing & VR", "3dpublishing", "images/000_general/cloudicon.png", "We develop interactive applications for viewing 3D scans on tablets, web interfaces and in VR. We create augmented reality apps and immersive mediums for digital storytelling.")
+    +service("Pointcloud Visualisation", "visualisation", "images/000_general/lookicon.png", "We provide industry-leading pointcloud visualisation, creating compelling imagery and film for exhibition and broadcast.")
+    .space2
+    +clients("images/000_general/Clients_01.png", "images/000_general/Clients_02.png")

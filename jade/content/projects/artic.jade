@@ -1,0 +1,8 @@
+include ../../partials/mixins
+
++project_head(projects[page].head.image)
+  +textblock(projects[page].body.content, projects[page].body.title)
+  .space
+  - each proj in projects[page].body.collection
+    +project_img(proj.image, proj.caption, proj.inline)
+  .space3

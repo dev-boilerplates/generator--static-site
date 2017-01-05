@@ -1,0 +1,164 @@
+mixin press_group(group, collection)
+  a.h3.left= group
+  p
+    each item in collection
+      | #{item} <br>
+    | <br><br>
+
+
+mixin project_head(src, isVideo)
+  - isVideo = isVideo || false
+  .w-container
+    .Main
+      if isVideo
+        .contentwrapper
+          .embed-container
+            iframe(src=src frameborder="")
+      else
+        img(src=src)
+      .w-row
+        .section
+          block
+
+// inline === 2 images will float
+mixin project_img(path, caption, inline)
+  if (inline)
+    .w-row
+      .w-col(class="w-col-6 leftimg")
+        img(src=path)
+        figcaption.fig= caption
+  else
+    img(src=path)
+    figcaption.fig= caption
+
+mixin footnotes(collection)
+  ol.footnote_container
+    - each subj in collection
+      li.integer
+        p.footnote= subj.name 
+          span.info= subj.quote
+        a(href=subj.link) see article source 
+          span.note= subj.note
+
+mixin news_item(link, src, title, date, content)
+  .w-col(class="w-col-6 leftimg")
+    a.h4(href=link target="_blank")
+      img(src=src)
+  .w-col(class="w-col-6 leftimg")
+    a.h4(href=link target="_blank")= title
+    a.h5= date
+    .thumb
+      p.news= content
+      a(href="https://twitter.com/ScanlabProjects" target="_blank")
+        img.social(src="images/000_general/twitter.svg")
+  .spaceline
+
+mixin portfolio_item(link, src, title, sub)
+  .project-thumb.huge
+    .project-link-container
+      a.project-thumb-link(href=link)
+        img(src=src)
+        span.overlay
+        .project-title-wrapper
+          .table
+            .table-cell
+              h2.title= title
+              h2.subtitle= sub
+
+mixin services_header(video)
+  .w-container
+    .Main
+      .contentwrapper
+        .embed-container
+          iframe(src=video frameborder="0")
+  .w-container
+    .w-row
+      .w-container
+        .section
+          block
+
+mixin textblock(textarray, title)
+  if (title != "undefined")
+    h1= title  
+  p.bold
+    each line in textarray
+      | #{line} <br><br>
+
+mixin interrupt(quote, int)
+  - int = int || false
+  if int
+    p.interrupt= quote
+      span.superscript= int
+  else
+    p.interrupt= quote
+
+// Home -- Showreel Slider entries
+mixin sliderContent(img, vid)
+  .rsContent
+    a.rsImg(data-rsvideo= src || null href= img)
+    p.rsABlock(class="sampleBlock") A pioneering creative practice exploring the world<br>through precise, beautiful digital replicas of buildings,<br>landscapes, objects and events.
+
+
+// Home -- Services
+mixin service(name, link, icon, summary)
+  .services(class="w-col w-col-4")
+    img.icon(src= icon alt="icon")
+    a.h3(href= link target="_self")!= name
+    p= summary
+
+// Home -- Selected Clients
+mixin clients(...collection)
+  p.h3 Selected Clients
+  - each client in collection
+    p.w-col(class="w-col-6")
+      img(src= client alt="Selected Clients")
+  .space2
+
+// About -- quote
+mixin quote(quote, by)
+  p.h2= quote
+  p.h2
+    a!= by
+  .space
+
+mixin related_projects_break()
+  .space2
+  p.h4 Related related_projects
+  .space
+
+// related project
+mixin related_project(link, linkType, img, title, sub, txtclass)
+  .project-thumb
+    .project-link-container
+      a.project-thumb-link(href=link, target=linkType)
+        img(src=img)
+        span.overlay
+        .project-title-wrapper
+          .table
+            .table-cell
+              h2.title(class=txtclass || null)= title
+              h2.subtitle(class=txtclass || null)= sub
+
+// About -- team member
+mixin team_member(name, about, full)
+  if (full != true)
+    .w-col(class="services w-col-6")
+      p.bold= name
+      p.services= about
+      | <br>
+  else 
+    .w-col(class="services")
+      p.bold= name
+      p.services= about
+      | <br>
+      block
+
+mixin ga(uid)
+  script.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', #{uid}, 'scanlabprojects.co.uk');
+    ga('send', 'pageview');

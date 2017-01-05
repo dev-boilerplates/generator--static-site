@@ -1,0 +1,19 @@
+extends ../../structure
+include ../../partials/mixins
+
+block vars
+  - var page = 'artic'
+
+block head
+  include ../../partials/meta-project
+
+block navigation
+  include ../../partials/navigation-project
+block content
+  include ../../content/projects/artic
+
+block scripts
+  +ga("'UA-48784022-1'")
+
+block footer
+  include ../../partials/footer

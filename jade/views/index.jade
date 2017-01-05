@@ -1,0 +1,20 @@
+extends ../structure
+include ../partials/mixins
+
+block vars
+  - var page = 'index'
+
+block head
+  include ../partials/meta
+
+block navigation
+  include ../partials/navigation
+block content
+  include ../content/index
+
+block scripts
+  script(src="js/views/index.js")
+  +ga("'UA-48784022-1'")
+
+block footer
+  include ../partials/footer

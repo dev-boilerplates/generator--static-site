@@ -1,0 +1,18 @@
+extends ../../structure
+include ../../partials/mixins
+block vars
+  - var page = 'visualisation'
+
+block head
+  include ../../partials/meta
+
+block navigation
+  include ../../partials/navigation
+block content
+  include ../../content/services/visualisation
+
+block scripts
+  +ga("'UA-48784022-1'")
+
+block footer
+  include ../../partials/footer

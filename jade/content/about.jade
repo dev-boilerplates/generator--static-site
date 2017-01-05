@@ -1,0 +1,37 @@
+include ../partials/mixins
+
+.w-container
+  .Main
+    img(src="images/005_about/MW_A.jpg")
+    .section
+      p.bold ScanLAB Projects is an award winning creative studio. We specialise in exploring the use of large scale 3D scanning in architecture and the creative industries. <br><br>
+      | We are one of the UK’s leading providers of large scale 3D scanning services, capturing precisely measured, beautifully coloured digital replicas of buildings, landscapes, objects and events. We work with our clients to digitise the world, transforming temporary events and spaces into permanent, compelling digital records, images and film. We design online environments, immersive installations, objects and mobile applications. <br><br>
+      | Founded in 2010, we have worked with leading architects, broadcasters, scientists and artists from across the world. Our work has featured in major TV documentaries and cinema screenings, been widely published and exhibited internationally.
+      .space
+    .section
+      .twothirds
+        +quote("'A fantastic visual punch ... quite simply breathtaking'", "Nicola Seare, Culture Show, BBC TWO")
+        +quote("'Apart from the exquisitely defined visual results, the scanning of 55/02 has provided us with an entirely new and powerful design tool.'", "Bob Sheil, Director, Bartlett School of Architecture, UCL")
+        +quote("'Working with ScanLAB reduces the extreme effort of manual profiling of sea ice in the Arctic to a matter of hours. A full description of a floe can be carried away and every contour examined in full living detail'", "Peter Wadhams, Professor of Ocean Physics and<br> Head of the Polar Ocean Physics Group, Cambridge University")
+      .space
+      .space
+    //- .w-container
+    .section
+      +team_member("Matthew Shaw", "Matt is co-founder of ScanLAB Projects. His background is in architecture, digital fabrication and speculation about digital cities of the future. Over the last 5 years he’s been turning the relentless, machinic eye of the 3D scanner on anything and everything - from giant mirrored sculptures, Arctic ice floes, Roman Sewers and graceful dancers. He is fascinated by the creative and critical role of the pointcloud, and is a big believer in experimentation and precision in equal measure!")
+      +team_member("William Trossell", "Will is co-founder of ScanLAB Projects. He loves building new and extraordinary ways to expand our understanding of the material world. An architect in training he graduated from the Bartlett but has been somewhat sidetracked as a creative technologist. With a keen interest in how the digital and it’s augmentation might impact our cultural heritage Will has working closely with Museums and World Heritage Sites around the world.")
+      +team_member("Luca Veronese","Luca is lead 3D Artist at ScanLAB. Having previously worked in the jewelry and interiors industries he joined ScanLAB in 2015 and has thrived learning new 3D modelling, texturing, animating, rendering and compositing techniques to create visual elements that interact with and refine our pointcloud animations. Luca has been digitising a series of cast’s from the Sir John Soane's Museum and instrumental in the success of Pompeii | New secrets Revealed.")
+      +team_member("Reuben Carter","Reuben is a software and electronic engineer with an incredible understanding of interactive, spatial environments. He completed his MEng in Electrical Engineering at Southampton University in 2014. Since joining ScanLAB in 2015 his R&D has enabled pioneering VR projects with the BBC and led to exciting, new pointcloud visualisation and interaction workflows. His diverse digital skill-set is currently being put to task on series of AR + VR environments that allow us to wander through pointlcouds in groundbreaking new ways.")
+      +team_member("Jean-Christophe Nicolas","Jean is a web developer with a keen interest in online 3D storytelling. Since joining ScanLAB he’s taken the weird and wonderful pointcloud world into wonderful new spaces online. He’s the force behind our digitisation of the Sir John Soane Museum and is currently bringing the lost tunnels of London’s Mail Rail system to life a series of new installations coming soon!")
+      +team_member("Egmontas Geras","Egmontas joined ScanLAB in 2016 following his fascination with strange digital environments and film. He is a graduate of the BSc in Architecture at the Bartlett, UCL. During his time at ScanLAB he has mastered the art of pointcloud visualisation, working on various projects including our upcoming BBC ONE series Invisible Italy, our ongoing Post-lenticular Landscapes project for LACMA and our etched glass installation ‘infractus’ at the Venice Biennale.")
+      +team_member("Flavian", "")
+      +team_member("Past Members", "Over the years we’ve had the pleasure of counting Julia Schütz, Sammy Lee, Fiona Zisch, Berni Devilat, Thomas Parker, Tom Svilans and Thomas Pearce as fantastic team members.")
+      .space
+      +team_member("Come Join Us", "We are always looking for talented individuals to join the team from a broad range of backgrounds. If you are from a photographic, computer science, geomatics, digital fabrication, architecture, design or film based background, or just a talented someone interested in the pointcloud world then we’d love to hear from you.", true)
+        p.services Please email CV’s to Matt & Will<br>
+        | studio@scanlabprojects.co.uk
+    .space3
+      .section
+        +related_project("http://www.scanlab-ucl.co.uk", "_blank", "images/005_about/T_UCL.jpg", "Teaching", "research")
+        +related_project("press", "_self", "images/005_about/AD_C.jpg", "Press", "Exhibitions")
+        +related_project("signup", "_self", "images/005_about/NL.jpg", "Newsletter", "Signup here", "black")
+      .space
